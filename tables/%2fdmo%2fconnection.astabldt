@@ -1,0 +1,18 @@
+@EndUserText.label : 'Flight Reference Scenario: Connection'
+@AbapCatalog.enhancement.category : #NOT_EXTENSIBLE
+@AbapCatalog.tableCategory : #TRANSPARENT
+@AbapCatalog.deliveryClass : #A
+@AbapCatalog.dataMaintenance : #RESTRICTED
+define table /dmo/connection {
+
+  key client        : abap.clnt not null;
+  key carrier_id    : /dmo/carrier_id not null;
+  key connection_id : /dmo/connection_id not null;
+  airport_from_id   : /dmo/airport_from_id;
+  airport_to_id     : /dmo/airport_to_id;
+  departure_time    : /dmo/flight_departure_time;
+  arrival_time      : /dmo/flight_arrival_time;
+  distance          : /dmo/flight_distance;
+  distance_unit     : msehi;
+
+}

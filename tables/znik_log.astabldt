@@ -1,0 +1,18 @@
+@EndUserText.label : 'DB table for logs'
+@AbapCatalog.enhancement.category : #NOT_EXTENSIBLE
+@AbapCatalog.tableCategory : #TRANSPARENT
+@AbapCatalog.deliveryClass : #A
+@AbapCatalog.dataMaintenance : #RESTRICTED
+define table znik_log {
+
+  key client         : abap.clnt not null;
+  key change_id      : abap.raw(16) not null;
+  travelid           : /dmo/travel_id;
+  changing_operation : abap.char(10);
+  changed_field_name : abap.char(32);
+  changed_value      : abap.char(32);
+  previous_value     : abap.char(50);
+  created_at         : timestampl;
+  user_responsible   : abap.char(50);
+
+}

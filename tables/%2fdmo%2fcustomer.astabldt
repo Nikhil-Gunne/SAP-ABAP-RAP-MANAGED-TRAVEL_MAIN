@@ -1,0 +1,25 @@
+@EndUserText.label : 'Flight Reference Scenario: Managing Customers'
+@AbapCatalog.enhancement.category : #NOT_EXTENSIBLE
+@AbapCatalog.tableCategory : #TRANSPARENT
+@AbapCatalog.deliveryClass : #A
+@AbapCatalog.dataMaintenance : #RESTRICTED
+define table /dmo/customer {
+
+  key client            : abap.clnt not null;
+  key customer_id       : /dmo/customer_id not null;
+  first_name            : /dmo/first_name;
+  last_name             : /dmo/last_name;
+  title                 : /dmo/title;
+  street                : /dmo/street;
+  postal_code           : /dmo/postal_code;
+  city                  : /dmo/city;
+  country_code          : land1;
+  phone_number          : /dmo/phone_number;
+  email_address         : /dmo/email_address;
+  local_created_by      : abp_creation_user;
+  local_created_at      : abp_creation_tstmpl;
+  local_last_changed_by : abp_locinst_lastchange_user;
+  local_last_changed_at : abp_locinst_lastchange_tstmpl;
+  last_changed_at       : abp_lastchange_tstmpl;
+
+}

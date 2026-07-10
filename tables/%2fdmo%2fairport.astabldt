@@ -1,0 +1,14 @@
+@EndUserText.label : 'Flight Reference Scenario: Airport'
+@AbapCatalog.enhancement.category : #NOT_EXTENSIBLE
+@AbapCatalog.tableCategory : #TRANSPARENT
+@AbapCatalog.deliveryClass : #A
+@AbapCatalog.dataMaintenance : #RESTRICTED
+define table /dmo/airport {
+
+  key client     : abap.clnt not null;
+  key airport_id : /dmo/airport_id not null;
+  name           : /dmo/airport_name;
+  city           : /dmo/city;
+  country        : land1;
+
+}

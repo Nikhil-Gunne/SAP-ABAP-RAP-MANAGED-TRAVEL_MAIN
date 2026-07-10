@@ -1,0 +1,5 @@
+@EndUserText.label: 'Service definition on travel APPROVER'
+define service ZSRVD_NIK_TRAVEL_APPR_M {
+  expose ZC_NIK_TRAVEL_APP_M;
+  expose ZC_NIK_BKNG_APP_M;
+}
